@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.arcmenu.view.ArcMenu;
 
@@ -44,6 +45,13 @@ public class MainActivity extends Activity {
                 if (mArcMenu.isOpen()) {
                     mArcMenu.toggleMenu(600);
                 }
+            }
+        });
+
+        mArcMenu.setOnMenuItemClickListener(new ArcMenu.OnMenuItemClickListener() {
+            @Override
+            public void onClick(View view, int pos) {
+                Toast.makeText(MainActivity.this, pos + ":" + view.getTag(), Toast.LENGTH_SHORT).show();
             }
         });
     }

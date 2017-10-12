@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.arcmenu.view.ArcMenu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_arcmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:position="left_bottom"
+    app:radius="100dp"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@mipmap/ic_dot">
+
+        <ImageView
+            android:id="@+id/id_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_plus" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_camera"
+        android:tag="Camera" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_music"
+        android:tag="Music" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_battery"
+        android:tag="Battery" />
+
+
+</com.example.arcmenu.view.ArcMenu>
+
