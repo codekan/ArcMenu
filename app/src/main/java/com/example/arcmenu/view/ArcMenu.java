@@ -199,7 +199,7 @@ public class ArcMenu extends ViewGroup implements View.OnClickListener {
     /**
      * 切换菜单
      */
-    private void toggleMenu(int duration) {
+    public void toggleMenu(int duration) {
         // 为所有menuItem添加平移动画和旋转动画
         int count = getChildCount();
 
@@ -349,6 +349,10 @@ public class ArcMenu extends ViewGroup implements View.OnClickListener {
      */
     private void changeStatus() {
         mCurrentStatus = (mCurrentStatus == Status.CLOSE ? Status.OPEN : Status.CLOSE);
+    }
+
+    public boolean isOpen(){
+        return mCurrentStatus == Status.OPEN;
     }
 
     private void rotateCButton(View v, float start, float end, int duration) {
