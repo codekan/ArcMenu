@@ -109,6 +109,15 @@ public class ArcMenu extends ViewGroup implements View.OnClickListener {
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
+        /**
+         * 没有调用setMeasuredDimension()
+         * 我：这个方法是设置自身大小的。
+         * 本View是继承的ViewGroup，在onMeasure()中需要先测量子View的大小，再设置自身大小
+         *
+         * onMeasure()的重写分两类，一种是对View，一种是对ViewGroup
+         * http://blog.csdn.net/cyp331203/article/details/45027641
+         */
+
     }
 
     @Override
